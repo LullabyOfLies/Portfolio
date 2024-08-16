@@ -10,7 +10,7 @@ const Contact = () => {
       </div>
       <form
         className="contact-form slideup"
-        action="https://formsubmit.co/170b574dfc2c1abd337bea8d24b1416c" 
+        action="https://formsubmit.co/jeanrecato25@gmail.com" 
         method="POST"
       >
         <input type="text" name="name" placeholder="Name" required />
