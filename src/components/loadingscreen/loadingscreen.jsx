@@ -3,6 +3,8 @@ import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-pro
 import 'react-circular-progressbar/dist/styles.css';
 import './LoadingScreen.css';
 
+import Cat from '../../assets/homepage/catroll.gif'
+
 
 const LoadingScreen = ({ slideDown }) => {
   const [progress, setProgress] = useState(0);
@@ -44,7 +46,7 @@ const LoadingScreen = ({ slideDown }) => {
         >
              <img
             className="cat-gif"
-            src="src/assets/homepage/catroll.gif"
+            src={Cat}
             alt="cat"
           />
           
