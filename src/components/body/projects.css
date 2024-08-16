@@ -1,0 +1,237 @@
+/* src/components/projects.css */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+}
+
+.two-column-body {
+    flex: 1; /* Allow the main content to take up available space */
+}
+
+
+.left-column {
+    display: grid;
+    place-items: start;
+    max-height: 36.938rem;
+    height: 36.938rem;
+    max-width: 100%;
+    width: 45rem;
+    padding: 20px; /* Add padding of 20px */
+}
+
+.right-column {
+    display: flex;
+    align-items: center;
+    max-width: 45rem;
+    height: 36.938rem;
+}
+
+.projectintro {
+    padding: 20px 0 0 20px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.2;
+    color: black;
+}
+
+.sub{
+    padding: 0 0 0 20px;
+}
+
+.subheadings .project1, .project2, .project3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: #0c66e4;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+
+
+h4, .subheadings .project1 h3, .project2 h3, .project3 h3 {
+    margin-bottom: 0.25rem; /* Reduce the gap between project titles */
+}
+
+h4{
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    padding-bottom: 16px;
+}
+
+h3{
+    margin:0;
+    padding: 0;
+
+}
+
+.checkout-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.75rem; /* Reduced padding for a smaller button */
+    background-color: #0c66e4;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 0.875rem; /* Reduced font size for a smaller appearance */
+}
+
+.checkout-button:hover {
+    background-color: #084ca1;
+}
+
+
+.subheadings .project1 p, .project2 p, .project3 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+.subheadings h3.active {
+    font-weight: bold;
+    margin: 0;
+}
+
+.subheadings {
+    z-index: 5;
+}
+
+.column {
+    flex: 1 1 auto;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image covers the entire container without distortion */
+    border-radius: 8px;
+}
+
+.checkout-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #0c66e4;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.checkout-button:hover {
+    background-color: #084ca1;
+}
+
+.button-container {
+    display: grid;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .two-column-body {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .column {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .two-column-body {
+        margin: 1rem 2rem;
+        padding: 1rem;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .projectintro,
+    h4 {
+        font-size: 1rem;
+    }
+
+    .subheadings .project1,
+    .subheadings .project2,
+    .subheadings .project3 {
+        font-size: 1rem;
+    }
+
+    .subheadings .project1 p,
+    .subheadings .project2 p,
+    .subheadings .project3 p {
+        font-size: 0.85rem;
+    }
+
+    .checkout-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .two-column-body {
+        margin: 1rem 3rem;
+        padding: 1.5rem;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    .projectintro,
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    .subheadings .project1,
+    .subheadings .project2,
+    .subheadings .project3 {
+        font-size: 1.25rem;
+    }
+
+    .subheadings .project1 p,
+    .subheadings .project2 p,
+    .subheadings .project3 p {
+        font-size: 0.95rem;
+    }
+
+    .checkout-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}

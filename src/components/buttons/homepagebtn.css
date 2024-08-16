@@ -1,0 +1,38 @@
+/* src/components/buttons/homepagebtn.css */
+
+.homepage-btn {
+    background-color: #006AFF;
+    color: #ffffff;
+    padding: 1.5rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    width: 21.125rem;
+    font-family: "Montserrat", sans-serif;
+    z-index: 1;
+}
+
+/* Added gradient and animation */
+.gradient-btn {
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 30px;
+}
+
+.gradient-btn:hover {
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}

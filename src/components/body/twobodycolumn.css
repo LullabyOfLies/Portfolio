@@ -1,0 +1,167 @@
+/* src/components/TwoColumnBody.css */
+
+.two-column-body {
+  margin: 1rem 4.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.left-column {
+  display: grid;
+  place-items: start;
+  max-height: 36.938rem;
+  height: 36.938rem;
+  max-width: 100%;
+  width: 45rem;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+   /* Slide in from the left */
+
+}
+
+.right-column {
+  max-width: 35rem;
+  /* Ensure the right column matches the image container */
+  display: flex;
+  align-items: center;
+  /* Slide in from the right */
+
+
+}
+
+/* Keyframes for sliding animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    
+  }
+}
+
+.introduction,
+.subheadings {
+  padding: 20px;
+  z-index: 2;
+  /* Ensure this content is above the background */
+  position: relative;
+  /* Establishes a new stacking context */
+  background-color: rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.introduction {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+/* .subheadings {
+  padding: 20px;
+
+} */
+
+.column {
+  flex: 1 1 auto;
+  /* Allow the columns to grow and shrink based on content */
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.myName,
+.greetings {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  word-wrap: break-word;
+  line-height: 1;
+}
+
+.myName {
+  color: #0c66e4;
+}
+
+.greetings {
+  color: black;
+}
+
+.title {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: black;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.quote {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: black;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  word-wrap: break-word;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  max-width: 100%;
+  max-height: 36.938rem;
+  width: 45rem;
+  height: 100%;
+  z-index: 2;
+  /* Ensure this content is above the background */
+  position: relative;
+  /* Establishes a new stacking context */
+     animation: slideInFromRight 1s ease-out forwards;
+}
+
+.button-container {
+  display: grid;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .two-column-body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .column {
+    margin: 0 0.5rem;
+  }
+}

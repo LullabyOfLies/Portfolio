@@ -1,0 +1,143 @@
+/* src/components/contact.css */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .contact-upper-row {
+    margin-bottom: 2rem;
+  }
+
+  .contactintro{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    color: black;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    word-wrap: break-word;
+    line-height: 0;
+  }
+
+  .contactsubtitle{
+    margin: 0;
+    color: black;
+    line-height: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .contact-form input {
+    height: 90px;
+  }
+  
+  .contact-form textarea {
+    height: 180px;
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    width: 320px;
+    height: 50px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #006AFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0051cc;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 1rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1rem;
+    }
+  
+    .contact-form button {
+      font-size: 1rem;
+    }
+  }
+
+  .slideright{
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+
+  .slideleft{
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+
+  .slideup{
+    animation: slideup 1s ease-in forwards;
+  }
+  
+  /* Keyframes for sliding animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    
+  }
+}
+
+  @keyframes slideup {
+    0%{
+      transform: translateY(100%);
+    }
+    100%{
+      transform: translateY(0);
+    }
+    
+  }
