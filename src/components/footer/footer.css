@@ -32,13 +32,15 @@
 
 .sayhello{
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
 
 .footer-left p {
   margin: 10px;  /* Remove margins from h3 and p tags */
   padding: 0;  /* Remove padding from h3 and p tags */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 

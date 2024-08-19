@@ -1,19 +1,22 @@
 /* src/components/contact.css */
 
+
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
   
+}
+
   .contact-upper-row {
     margin-bottom: 2rem;
+    line-height: 1rem;
   }
 
   .contactintro{
@@ -40,6 +43,7 @@
     width: 100%;
     max-width: 600px;
     gap: 1rem;
+
   }
   
   .contact-form input,
@@ -81,20 +85,7 @@
     background-color: #0051cc;
   }
   
-  @media (max-width: 768px) {
-    .contact-container {
-      padding: 1rem;
-    }
   
-    .contact-form input,
-    .contact-form textarea {
-      font-size: 1rem;
-    }
-  
-    .contact-form button {
-      font-size: 1rem;
-    }
-  }
 
   .slideright{
     animation: slideInFromRight 1s ease-out forwards;
@@ -108,6 +99,53 @@
     animation: slideup 1s ease-in forwards;
   }
   
+ /* src/components/contact.css */
+
+
+/* Mobile Styles for Screens 600px and Below */
+@media (max-width: 600px) {
+  .contact-container {
+      padding: 1rem;
+      margin: 0 auto;
+      max-width: 90%; /* Reduce the overall width */
+  }
+
+  .contact-upper-row {
+      margin-bottom: 1rem;
+      line-height: 1.2rem;
+      width: 100%; /* Make sure the text doesn't overflow */
+  }
+
+  .contactintro {
+      font-size: 2rem; /* Reduce font size */
+  }
+
+  .contactsubtitle {
+      font-size: 1rem; /* Reduce subtitle font size */
+      margin-top: 0.5rem; /* Add margin to create space */
+      line-height: 1.4; /* Adjust line-height to prevent overlap */
+  }
+
+  .contact-form {
+      width: 100%;
+      max-width: 100%; /* Ensure form width fits within the container */
+      gap: 0.75rem; /* Reduce the gap between form elements */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      padding: 0.75rem; /* Reduce padding for inputs */
+      font-size: 1rem; /* Adjust font size */
+  }
+
+  .contact-form button {
+      width: 100%;
+      height: 45px; /* Adjust button height */
+      font-size: 1rem; /* Adjust button font size */
+  }
+}
+
+
   /* Keyframes for sliding animations */
 @keyframes slideInFromLeft {
   0% {

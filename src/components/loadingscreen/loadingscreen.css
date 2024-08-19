@@ -8,23 +8,30 @@
   justify-content: center;
   align-items: center;
   background-color: #0c66e4;
-  opacity: 1;
+  opacity: 5;
   z-index: 1000;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   color: #f5f3ed;
+  overflow: hidden; /* Ensure no overflow on smaller screens */
 }
 
 .main-column {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: '250px';
-  height: '250px';
+  width: 80vw; /* Use viewport width for responsive scaling */
+  height: 80vh; /* Use viewport height for responsive scaling */
+  max-width: 300px; /* Cap the maximum size for larger screens */
+  max-height: 300px; /* Cap the maximum size for larger screens */
 }
 
 .loading-screen.slide-down {
   transform: translateY(100%);
+  opacity: 0;
+}
+
+.circularprogressbar{
   opacity: 0;
 }
 
@@ -34,19 +41,19 @@
 }
 
 .cat-gif {
-  width: 80%;
-  /* Responsive width */
-  height: auto;
-  /* Maintain aspect ratio */
+  width: 70%; /* Adjust the GIF width to make it more responsive */
+  height: auto; /* Maintain aspect ratio */
   margin-top: -5px;
+  opacity: 2;
 }
 
 .loading-text {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-top: 2rem;
   color: #f5f3ed;
   text-align: center;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.1rem;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+  text-wrap: wrap;
 }

@@ -6,26 +6,18 @@ import Skills from './components/body/skills';
 import Contact from './components/body/contact';
 import bgBackground from './assets/homepage/bgbackground.gif'; // Import the background GIF
 import Footer from './components/footer/footer';
-import LoadingScreen from './components/loadingscreen/loadingscreen'; // Import the loading screen
-
 import './App.css'; // General CSS for the app
 
 function App() {
   const [activeLink, setActiveLink] = useState('#home');
   const [loading, setLoading] = useState(true); // State to control loading screen
-  const [slideDown, setSlideDown] = useState(false); // State to control slide-down effect
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setSlideDown(true); // Trigger the slide-down animation
-    }, 5000); // Delay for 5 seconds before starting the slide-down
-
     const loadingTimer = setTimeout(() => {
-      setLoading(false); // Hide the loading screen after slide-down completes
-    }, 7000); // Give an additional 1 second for the slide-down animation to complete
+      setLoading(false); // Hide the loading screen after it's done
+    }, 7000); // Adjust time to match the duration of your loading screen
 
     return () => {
-      clearTimeout(timer);
       clearTimeout(loadingTimer);
     };
   }, []);
@@ -33,7 +25,7 @@ function App() {
   const renderMainContent = () => {
     switch (activeLink) {
       case '#home':
-        return <TwoColumnBody />;
+        return <TwoColumnBody loading={loading} />; // Pass loading state to TwoColumnBody
       case '#projects':
         return <Projects />;
       case '#skills':
@@ -41,15 +33,15 @@ function App() {
       case '#contact':
         return <Contact />;
       default:
-        return <TwoColumnBody />;
+        return <TwoColumnBody loading={loading} />; // Pass loading state to TwoColumnBody
     }
   };
 
   return (
     <div className="App">
-      {/* Render main content first, behind the loading screen */}
-      <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
-      <main className={`main-content ${loading ? 'hidden' : ''}`}>
+      {/* Conditionally render Navbar only when loading is complete */}
+      {!loading && <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />}
+      <main className="main-content">
         {activeLink === '#home' && (
           <div
             className="background-image"
@@ -59,9 +51,6 @@ function App() {
         {renderMainContent()}
       </main>
       {activeLink !== '#home' && <Footer />}
-
-      {/* Loading screen, displayed above the main content */}
-      {loading && <LoadingScreen slideDown={slideDown} />}
     </div>
   );
 }

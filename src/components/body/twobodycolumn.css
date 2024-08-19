@@ -1,10 +1,12 @@
 /* src/components/TwoColumnBody.css */
 
+/* General two-column layout for larger screens */
 .two-column-body {
   margin: 1rem 4.5rem;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+  /* Default to side by side layout */
   padding: 2rem;
   gap: 2rem;
   overflow: hidden;
@@ -20,7 +22,7 @@
   gap: 0;
   margin: 0;
   padding: 0;
-   /* Slide in from the left */
+  /* Slide in from the left */
 
 }
 
@@ -40,6 +42,7 @@
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -51,10 +54,11 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
-    
+
   }
 }
 
@@ -134,13 +138,11 @@
   margin-top: 0;
   max-width: 100%;
   max-height: 36.938rem;
-  width: 45rem;
-  height: 100%;
+  width: 100%;
+  height: auto;
   z-index: 2;
-  /* Ensure this content is above the background */
   position: relative;
-  /* Establishes a new stacking context */
-     animation: slideInFromRight 1s ease-out forwards;
+  animation: slideInFromRight 1s ease-out forwards;
 }
 
 .button-container {
@@ -155,13 +157,39 @@
   border-radius: 8px;
 }
 
-@media (min-width: 768px) {
+
+/* Adjust the layout for tablets */
+@media (max-width: 768px) {
   .two-column-body {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    /* Stack columns vertically on smaller screens */
+    padding: 1rem;
+    margin: 1rem;
   }
 
-  .column {
-    margin: 0 0.5rem;
+  .left-column,
+  .right-column {
+    width: 100%;
+    /* Make sure both columns take the full width */
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+  }
+}
+
+/* Adjust layout for mobile devices */
+@media (max-width: 480px) {
+  .two-column-body {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .left-column,
+  .right-column {
+    padding: 0.5rem 0;
+  }
+
+  .button-container {
+  padding-bottom: 20px;
   }
 }

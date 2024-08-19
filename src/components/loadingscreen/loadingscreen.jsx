@@ -34,7 +34,7 @@ const LoadingScreen = ({ slideDown }) => {
   return (
     <div className={`loading-screen ${progress === 100 ? 'slide-down' : ''}`}>
       <div  className='main-column'>
-        <CircularProgressbarWithChildren
+        <CircularProgressbarWithChildren className='circularprogressbar'
           value={progress}
           styles={buildStyles({
             pathColor: '#f5f3ed',

@@ -14,14 +14,14 @@
     text-align: center;
     padding-bottom: 1rem;
     margin: 0;
-    height: 40px;
+
     
   }
 
 
   
   .skillsintro {
-    padding-top: 6rem;
+
     font-family: "Montserrat", sans-serif;
     font-size: 3.5rem;
     color: black;
@@ -33,11 +33,13 @@
 
   .subtitle{
     margin: 0;
-    padding-bottom: 8rem;
+
     color: black;
-    line-height: 0;
+    line-height: 1.2; /* Adjusted line-height for better spacing */
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    word-wrap: break-word;
   }
   
   .bottom-row {
@@ -119,11 +121,13 @@
     font-size: 2.5rem;
     line-height: 1.2;
   }
-
+  
   .subtitle {
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
     font-size: 1rem;
+    word-wrap: break-word;
   }
+  
 
   .bottom-row {
     flex-direction: column;
@@ -167,13 +171,15 @@
   }
 
   .subtitle {
-    padding-bottom: 6rem;
+    /* padding-bottom: 6rem; */
     font-size: 1.125rem;
+    word-wrap: break-word;
   }
 
   .bottom-row {
     flex-direction: column;
     padding-top: 15px;
+    margin-bottom: auto;
   }
 
   .bottom-inner-row {
@@ -183,7 +189,7 @@
   }
 
   .card-container {
-    width: 90%;
+    width: 50%;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
   }
@@ -208,13 +214,12 @@
   }
 
   .skillsintro {
-    padding-top: 6rem;
     font-size: 3.5rem;
   }
 
   .subtitle {
-    padding-bottom: 8rem;
     font-size: 1.25rem;
+    text-wrap: wrap;
   }
 
   .bottom-row {

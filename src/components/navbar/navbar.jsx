@@ -18,7 +18,7 @@ const Navbar = ({ activeLink, setActiveLink }) => {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-brand">JL.Dev</div>
+        <div className="navbar-brand" onClick={() => handleLinkClick('#home')}>JL.Dev</div>
         <div className="burger-icon" onClick={toggleSidebar}>
           &#9776; {/* This is the HTML code for a hamburger icon */}
         </div>
