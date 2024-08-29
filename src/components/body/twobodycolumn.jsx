@@ -1,6 +1,6 @@
 import React from 'react';
 import './twobodycolumn.css'; // Import CSS for styling
-import myImage from '../../assets/homepage/bg.webp';
+import myImage from '../../assets/homepage/profile.webp';
 import HomepageButton from '../buttons/homepagebtn'; // Import the custom button component
 import pdfUrl from '../../assets/pdfs/CV.pdf'; // Import the PDF file
 import LoadingScreen from '../loadingscreen/loadingscreen'; // Import the loading screen
